@@ -1,0 +1,208 @@
+Perfecto 💪 Vamos a armar una **guía completa para configurar y correr un proyecto Laravel desde cero**, junto con los **comandos que puedes poner en tu `README.md`**.
+
+---
+
+## 🧱 **Configuración completa de un proyecto Laravel desde cero**
+
+### 🔧 **1. Requisitos previos**
+
+Asegúrate de tener instalados:
+
+* PHP ≥ 8.2
+* Composer
+* Node.js ≥ 18
+* NPM o Yarn
+* MySQL / PostgreSQL (o el motor de base de datos que uses)
+* Git (opcional pero recomendado)
+
+---
+
+### 🚀 **2. Crear un nuevo proyecto Laravel**
+
+```bash
+composer create-project laravel/laravel nombre-proyecto
+```
+
+O, si ya tienes un repositorio clonado:
+
+```bash
+git clone https://github.com/usuario/nombre-proyecto.git
+cd nombre-proyecto
+composer install
+```
+
+---
+
+### ⚙️ **3. Configurar variables de entorno**
+
+Copia el archivo de entorno de ejemplo:
+
+```bash
+cp .env.example .env
+```
+
+Genera la clave de aplicación:
+
+```bash
+php artisan key:generate
+```
+
+Configura en el archivo `.env` tus datos de conexión a la base de datos:
+
+```env
+APP_NAME="Mi Proyecto Laravel"
+APP_ENV=local
+APP_KEY=base64:GENERADA_POR_ARTISAN
+APP_DEBUG=true
+APP_URL=http://localhost
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nombre_base_datos
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+---
+
+### 🧰 **4. Migrar y sembrar la base de datos**
+
+Ejecuta las migraciones:
+
+```bash
+php artisan migrate
+```
+
+Si tienes **seeders**:
+
+```bash
+php artisan db:seed
+```
+
+O ambos en un solo paso:
+
+```bash
+php artisan migrate --seed
+```
+
+---
+
+### 🎨 **5. Instalar dependencias front-end**
+
+Con **NPM**:
+
+```bash
+npm install
+npm run dev
+```
+
+O con **Yarn**:
+
+```bash
+yarn install
+yarn dev
+```
+
+---
+
+### 🧑‍💻 **6. Levantar el servidor local**
+
+```bash
+php artisan serve
+```
+
+Por defecto, Laravel correrá en:
+👉 `http://127.0.0.1:8000`
+
+---
+
+### 🧪 **7. Comandos útiles**
+
+| Tarea                                 | Comando                                        |
+| ------------------------------------- | ---------------------------------------------- |
+| Limpiar cachés                        | `php artisan optimize:clear`                   |
+| Crear modelo con migración            | `php artisan make:model Nombre -m`             |
+| Crear controlador                     | `php artisan make:controller NombreController` |
+| Crear componente Livewire (si aplica) | `php artisan make:livewire Nombre`             |
+| Ver rutas                             | `php artisan route:list`                       |
+
+---
+
+
+````markdown
+# 🚀 Proyecto Laravel
+
+Este proyecto está construido con [Laravel](https://laravel.com/).  
+A continuación encontrarás los pasos para configurarlo desde cero.
+
+## 📦 Requisitos
+- PHP >= 8.2
+- Composer
+- Node.js >= 18
+- NPM o Yarn
+- MySQL / PostgreSQL
+
+---
+
+## ⚙️ Instalación
+
+```bash
+git clone https://github.com/usuario/nombre-proyecto.git
+cd nombre-proyecto
+composer install
+cp .env.example .env
+php artisan key:generate
+````
+
+Configura el archivo `.env` con tus credenciales de base de datos.
+
+---
+
+## 🧱 Migraciones y Seeders
+
+```bash
+php artisan migrate --seed
+```
+
+---
+
+## 🎨 Frontend
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 🚀 Ejecutar el servidor
+
+```bash
+php artisan serve
+```
+
+El proyecto estará disponible en:
+👉 [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+---
+
+## 🧪 Comandos útiles
+
+| Descripción                | Comando                                        |
+| -------------------------- | ---------------------------------------------- |
+| Limpiar cachés             | `php artisan optimize:clear`                   |
+| Crear modelo con migración | `php artisan make:model Nombre -m`             |
+| Crear controlador          | `php artisan make:controller NombreController` |
+| Ver rutas                  | `php artisan route:list`                       |
+
+---
+
+## 🧑‍💻 Autor
+
+**Celeste Castellanos**
+📧 [celestecastell@gmail.com](mailto:celestecastell@gmail.com)
+
+```
+
+---
